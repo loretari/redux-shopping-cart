@@ -12,7 +12,10 @@ const Header =() => {
                               Redux Shopping App
                           </h2>
                       </li>
-                      <li>Cart</li>
+                      <li>
+                          <Cart />
+                      </li>
+
                   </ul>
 
               </nav>

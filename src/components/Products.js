@@ -3,38 +3,38 @@ import Product from "./Product";
 const DUMMY_PRODUCTS = [
     {
         id: 1,
-        name: "MacBook",
+        name: "Jacquard-knit mini dress",
         imgURL:
-            "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        price: 25,
+            "https://www.net-a-porter.com/variants/images/1647597321589419/in/w920_q60.jpg",
+        price: 2190,
     },
     {
         id: 2,
-        name: "Lenovo Yoga",
+        name: "Off-the-shoulder bow-detailed taffeta-trimmed flocked tulle mini dress",
         imgURL:
-            "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        price: 25,
+            "https://www.net-a-porter.com/variants/images/1647597310901508/in/w920_q60.jpg",
+        price: 1795,
     },
     {
         id: 3,
-        name: "Dell lattitude",
+        name: "Off-the-shoulder wool and silk-blend crepe midi dress",
         imgURL:
-            "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        price: 25,
+            "https://www.net-a-porter.com/variants/images/1647597310877086/in/w920_q60.jpg",
+        price: 4750,
     },
     {
         id: 4,
-        name: "HP Pavillion",
+        name: "Embellished silk-chiffon gown",
         imgURL:
-            "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        price: 25,
+            "https://www.net-a-porter.com/variants/images/1647597310906677/in/w920_q60.jpg",
+        price: 8500,
     },
     {
         id: 5,
-        name: "Acer Aspire",
+        name: "Ruffled printed silk-satin mini dress",
         imgURL:
-            "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        price: 25,
+            "https://www.net-a-porter.com/variants/images/1647597316378987/in/w920_q60.jpg",
+        price: 1590,
     },
 ];
 const Products = () => {
