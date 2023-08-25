@@ -8,7 +8,6 @@ const counterSlice = createSlice ({
             state.counter ++
         },
         decrement (state, action) {
-            console.log(action)
             state.counter --
         },
         addBy (state, action) {
@@ -28,26 +27,3 @@ const store = configureStore({
 
 export default store;
 
-// import { createStore } from "redux";
-//
-//
-// const reducerFn = (state = { counter: 0 }, action) => {
-//
-//     if (action.type === "INCR") {
-//         return { counter: state.counter +1 };
-//     }
-//
-//     if (action.type === "DEC") {
-//         return { counter: state.counter -1 }
-//     }
-//
-//     if (action.type === "ADD") {
-//         return { counter: state.counter + action.payload }
-//     }
-//
-//     return (state)
-// }
-//
-// const store = createStore(reducerFn)
-//
-// export default store;

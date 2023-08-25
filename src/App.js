@@ -6,10 +6,10 @@ function App() {
 
     const dispatch = useDispatch();
     const increment = () => {
-        dispatch (actions.increment)
+        dispatch (actions.increment())
     };
     const decrement = () => {
-        dispatch (actions.decrement)
+        dispatch (actions.decrement())
     };
     const addBy = () => {
         dispatch (actions.addBy(10))
