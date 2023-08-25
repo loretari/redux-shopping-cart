@@ -10,14 +10,14 @@ const DUMMY_PRODUCTS = [
     },
     {
         id: 2,
-        name: "Off-the-shoulder bow-detailed taffeta-trimmed flocked tulle mini dress",
+        name: "Off-the-shoulder  mini dress",
         imgURL:
             "https://www.net-a-porter.com/variants/images/1647597310901508/in/w920_q60.jpg",
         price: 1795,
     },
     {
         id: 3,
-        name: "Off-the-shoulder wool and silk-blend crepe midi dress",
+        name: "Off-the-shoulder midi dress",
         imgURL:
             "https://www.net-a-porter.com/variants/images/1647597310877086/in/w920_q60.jpg",
         price: 4750,
