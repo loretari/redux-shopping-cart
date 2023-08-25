@@ -40,10 +40,10 @@ button {
 
 .orderBtn {
     width: 200px;
-    background: orangered;
+    background: black;
     border: none;
     cursor: pointer;
 }
 .orderBtn:hover {
-    background: rgb(89, 0, 190);
+    background: gray;
 }
