@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {uiActions} from "./ui-slice";
 
 const cartSlice = createSlice({
     name: "cart",
@@ -25,7 +24,6 @@ const cartSlice = createSlice({
             if (existingItem) {
                 existingItem.quantity++;
                 existingItem.totalPrice += newItem.price;
-
             } else {
                 state.itemsList.push({
                     id: newItem.id,
@@ -39,63 +37,20 @@ const cartSlice = createSlice({
         },
         removeFromCart(state, action) {
             state.changed = true;
-           const id = action.payload;
+            const id = action.payload;
 
-           const existingItem = state.itemsList.find(item=> item.id === id);
-           if (existingItem.quantity === 1) {
-               state.itemsList = state.itemsList.filter(item => item.id !==id)
-           } else {
-               existingItem.quantity--
-               existingItem.totalPrice -= existingItem.price
-           }
+            const existingItem = state.itemsList.find(item=> item.id === id);
+            if (existingItem.quantity === 1) {
+                state.itemsList = state.itemsList.filter(item => item.id !==id)
+            } else {
+                existingItem.quantity--
+                existingItem.totalPrice -= existingItem.price
+            }
         },
         setShowCart(state) {
             state.showCart = !state.showCart;
         }
     }
 })
-
-export const sendCartData = (cart) => {
-    return async (dispatch) => {
-        dispatch(
-            uiActions.showNotification({
-                open: true,
-                message: "Sending Request",
-                type: 'warning'
-            }))
-    }
-
-
-const sendRequest = async ()=>{
-    // Send state as Sending request
-
-    const res = await  fetch('https://redux-shopping--cart-default-rtdb.firebaseio.com/cartItems.json',
-        {
-            method: "PUT",
-            body: JSON.stringify(cart),
-        }
-    );
-    const data = await res.json();
-    // Send state as Request is successful
-    dispatch(uiActions.showNotification({
-        open: true,
-        message: "Sent Request TO Database Successfully",
-        type: 'success'
-    }))
-    try {
-        await sendRequest();
-    } catch (err) {
-        dispatch(uiActions.showNotification({
-            open: true,
-            message: "Sending Request Failed",
-            type: 'error'
-        }))
-    }
-}
-
-}
-
-
 export const cartActions = cartSlice.actions;
-
 export default cartSlice;
