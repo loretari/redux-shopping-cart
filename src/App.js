@@ -4,7 +4,6 @@ import Auth from "./components/Auth";
 import Layout from "./components/Layout";
 import {useDispatch, useSelector} from "react-redux";
 import Notification from "./components/Notification";
-import {uiActions} from "./store/ui-slice";
 import {sendCartData} from "./store/cart-slice";
 
 
