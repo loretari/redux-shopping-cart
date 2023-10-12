@@ -1,27 +1,27 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import "./Cart.css";
-import { cartAction } from "./../store/cartSlice";
+import { cartActions } from "../store/cart-slice";
+
 
 
 const CartItem = ({ name, quantity, total, price, id }) => {
     const dispatch = useDispatch();
 
-    const removeHandler = () => {
+    const incrementCartItem = () => {
         dispatch(
-            cartAction.removeFromCart(id)
-        );
-    };
-
-    const addHandler = () => {
-        dispatch(
-            cartAction.addToCart({
+            cartActions.addToCart({
                 id,
                 name,
                 price,
             })
-        )
-    }
+        );
+    };
+
+    const decrementCartItems = () => {
+        dispatch(
+            cartActions.removeFromCart(id))
+    };
 
     return (
         <div className= "cartItem">
@@ -31,10 +31,10 @@ const CartItem = ({ name, quantity, total, price, id }) => {
             <article>Total ${total}</article>
             <button
                 className= "cart-actions"
-                onClick={removeHandler}>-</button>
+                onClick={ decrementCartItems }>-</button>
             <button
             className= "cart-actions"
-            onClick={addHandler}>+</button>
+            onClick={ incrementCartItem }>+</button>
         </div>
     )
 }
