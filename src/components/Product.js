@@ -7,7 +7,8 @@ const Product = ({ id, name, imgURL, price }) => {
 
     const dispatch = useDispatch()
     const addToCart = () => {
-dispatch(cartActions.addToCart({
+dispatch(
+    cartActions.addToCart({
     name,
     id,
     price,
