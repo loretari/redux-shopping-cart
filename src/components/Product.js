@@ -12,6 +12,7 @@ dispatch(
     name,
     id,
     price,
+    imgURL,
 }))
     }
 
@@ -20,7 +21,7 @@ dispatch(
             <img src={imgURL} alt={name} />
             <h2>{ name }</h2>
             <p>$ {price}</p>
-            <button onClick={ addToCart } >Add to cart</button>
+            <button className= "orderBtn" onClick={ addToCart } >Add to cart</button>
         </div>
     )
 }
