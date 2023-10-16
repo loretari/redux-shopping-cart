@@ -14,6 +14,7 @@ const CartItems = () => {
             <article>
                 <ul>
                 { cartItems.map((item) => (
+
                     <li key={item.id}>
                         {" "}
                         <CartItem
